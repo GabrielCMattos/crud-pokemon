@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Pokémon Owner')
+@section('title', 'Pokémon do Treinador')
 
 @section('content')
 <h1 class="text-align-center flex items-center justify-center font-bold text-xl" style="position:fixed;top:0">Pokémon do Owner {{$owner->name}}</h1>

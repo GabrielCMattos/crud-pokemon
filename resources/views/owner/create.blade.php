@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Novo Pokémon')
+@section('title', 'Novo Treinador')
 
 @section('content')
 

@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Todos os Pokémon')
+@section('title', 'Todos os Treinadores')
 
 @section('content')
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     @forelse($owners as $owner)
-        <div class="p-3">
+        <div class="w-64 p-3">
             <div class="w-full max-w-sm rounded overflow-hidden shadow-lg bg-white border-4 border-amber-400">
                 <div class="h-32 bg-gray-100 py-6 flex justify-center border-b-4 border-amber-400">
                     <img class="hover:scale-150 w-20" src="{{ asset('storage/' . $owner->caminhoImage) }}" alt="fotinhoPokemon">
