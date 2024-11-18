@@ -10,10 +10,6 @@ use Illuminate\Http\Request;
 class PokemonController extends Controller
 {
 
-public function inicio()
-{
-    return view ('pokemon.inicio');
-}
     public function index()
 {
     $pokemons = Pokemon::simplePaginate(8);

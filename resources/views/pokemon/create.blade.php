@@ -1,32 +1,32 @@
-@extends('layouts.app')
+
 
 @section('title', 'Novo Pokémon')
 
-@section('content')
 
-<div class="w-full max-w-xs mx-auto flex items-center justify-center min-h-screen ">
-  <form class="bg-white shadow-md rounded px-20 pt-6 pb-8 mb-4" action="{{ url('pokemon') }}" method="POST" enctype="multipart/form-data">
-  <img src="../logopokemon.png" alt="logopokemon" class="pb-6">
+<x-app-layout>
+<div class="w-full max-w-xs mx-auto flex items-center justify-center pt-2">
+  <form class="bg-white shadow-md rounded px-20 pt-6 pb-8 mb-2" action="{{ url('pokemon') }}" method="POST" enctype="multipart/form-data">
+  <img src="../logopokemon.png" alt="logopokemon" class="pb-2">
   @csrf
-    <div class="mb-4">
+    <div class="mb-2">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="Pokémon Name">
         Pokémon Name
       </label>
       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="name" type="text" placeholder="Pokémon Name" required>
     </div>
-    <div class="mb-4">
+    <div class="mb-2">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="Type">
         Pokémon Type(s)
       </label>
       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="type" type="text" placeholder="Pokémon Type(s)" required>
     </div>
-    <div class="mb-4">
+    <div class="mb-2">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="Pokémon Power Points">
         Pokémon Power Points
       </label>
       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="powerPoints" type="number" placeholder="Pokémon Power Points" required>
     </div>
-    <div class="mb-4">
+    <div class="mb-2">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="Pokémon Owner">
         Pokémon Owner
       </label>
@@ -38,7 +38,7 @@
         @endforelse
       </select>
     </div>
-    <div class="mb-4">
+    <div class="mb-2">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="Pokémon Imagem">
         Pokémon Image
       </label>
@@ -57,9 +57,8 @@
     </div>
   </form>
 </div>
+</x-app-layout>
 
-
-@endsection
 
 
 

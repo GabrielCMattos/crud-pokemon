@@ -1,8 +1,7 @@
-@extends('layouts.app')
-
 @section('title', 'Todos os Treinadores')
 
-@section('content')
+<x-app-layout>
+<div class="justify-center flex items-center min-h-screen pb-48">
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     @forelse($owners as $owner)
         <div class="w-64 p-3">
@@ -34,7 +33,8 @@
         <h1>Não existe nenhum owner cadastrado</h1>
     @endforelse
 </div>
-    <div class="mb-10" style="position:fixed;bottom:0"">
+    <div class="mb-" style="position:fixed;bottom:0"">
     {{$owners->links()}}
     </div>
-@endsection
+</div>
+</x-app-layout>

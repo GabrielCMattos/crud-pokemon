@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.base')
 
 @section('title', 'Novo Pokémon')
 
-@section('content')
 
+<x-app-layout>
 <div class="w-full max-w-xs mx-auto flex items-center justify-center min-h-screen">
     <form  class="bg-white shadow-md rounded px-20 pt-6 pb-8 mb-4" action="{{ url('pokemon/' . $pokemons->id) }}" method="POST" enctype="multipart/form-data">
     <img src="/logopokemon.png" alt="logopokemon" class="pb-6">
@@ -47,5 +47,4 @@
     </div>
     </form>
 </div>
-
-@endsection
+</x-app-layout>

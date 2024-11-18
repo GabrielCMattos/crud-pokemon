@@ -1,10 +1,8 @@
-@extends('layouts.app')
-
 @section('title', 'Pokémon do Treinador')
 
-@section('content')
-<h1 class="text-align-center flex items-center justify-center font-bold text-xl" style="position:fixed;top:0">Pokémon do Owner {{$owner->name}}</h1>
-<div class="pt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<x-app-layout>
+<div class="justify-center flex items-center min-h-screen pb-32">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     @foreach($pokemons as $pokemon)
         <div class="w-64 p-3">
             <div class="w-full max-w-sm rounded overflow-hidden shadow-lg bg-white border-4 border-amber-400">
@@ -33,7 +31,9 @@
         </div>
     @endforeach
 </div>
-    <div class="mb-1" style="position:fixed;bottom:0">
+    <div class="mb-1" style="position:fixed;bottom:0"">
     {{$pokemons->links()}}
     </div>
-@endsection
+</div>
+</x-app-layout>
+
